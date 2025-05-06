@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOvE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: blanchedalmond;
+        }
+        .main {
+            width: 500px;
+            height: 400px;
+            margin: 10px auto;
+            position: relative;
+        }
+        .main img {
+            top: 30%;
+            width: 200px;
+            height: 200px;
+            left: 10%;
+            position: absolute;
+            object-fit: cover;
+            align-items: center;
+        }
+        .main .content {
+            position: absolute;
+            top: 300px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: brown;
+            width: 100px;
+            height: 30px;
+            border-radius: 40px;
+            box-shadow: 0 0 5px black;
+            margin: 10px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease-in-out;
+            position: relative; /* Updated to position absolute */
+        }
+        .btn:hover {
+            background-color: pink;
+        }
+        .btn:hover a {
+            color: red;
+        }
+        .btn a {
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="img-box">
+            <img src="funny-bye.gif" alt="">
+        </div>
+        <div class="content">
+            <h2>Me apko mar dun gi bolen you love me</h2>
+            <p>Last chance sochne ka.. 😡</p>
+            <button class="btn" type="submit"><a href="yes.html">Yes</a></button>
+            <button class="btn" id="noBtn" type="button" onclick="change()">No</button>
+        </div>
+    </div>
+    <script>
+        function getRandomPosition(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function change() {
+            const noBtn = document.getElementById('noBtn');
+            const mainDiv = document.querySelector('.main');
+            const maxLeft = mainDiv.clientWidth - noBtn.clientWidth;
+            const maxRight = mainDiv.clientWidth - noBtn.clientWidth;
+            const maxTop = mainDiv.clientHeight - noBtn.clientHeight;
+            const maxBottom = mainDiv.clientHeight - noBtn.clientHeight;
+
+            const randomLeft = getRandomPosition(maxLeft);
+            const randomTop = getRandomPosition(maxTop);
+            const randomRight = getRandomPosition(maxRight);
+            const randomBottom = getRandomPosition(maxBottom);
+
+            noBtn.style.left = `${randomLeft}px`;
+            noBtn.style.top = `${randomTop}px`;
+            noBtn.style.right = `${randomRight}px`;
+            noBtn.style.bottom = `${randomBottom}px`;
+        }
+    </script>
+</body>
+</html>
