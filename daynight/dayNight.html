@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+      padding: 0;
+      margin: 0;
+      background-color: black;
+    }
+.main{
+    height: 25em;
+    width: 16.8em;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    overflow: hidden;
+    border-radius: 16.8em;
+    background-image: url(sunflower.jpg);
+    transform: translate(-50%, -50%);
+    object-fit:fill;
+    animation:main 10s linear infinite forwards;
+}
+@keyframes main {
+    10%{
+        background-image: url(sunflower.jpg);
+    }
+    53%{
+        background-image: url(night.jpeg);
+    }
+    55%{
+        background-image: url(night.jpeg);
+    }
+    98%{
+        background-image: url(night.jpeg);
+    }
+    100%{
+        background-image: url(sunflower.jpg);
+    }
+}
+.spinner{
+  height: 28.12em;
+  width: 28.12em;
+  border-radius: 50%;
+  position: absolute;
+  top: 8.75em;
+  left: -5.62em;
+  animation: spin 12s infinite forwards;
+}
+@keyframes spin {
+  10% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(180deg);
+  }
+  55% {
+    transform: rotate(180deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sun {
+  background-color:rgb(235, 182, 8);
+  height: 3.25em;
+  width: 3.25em;
+  border-radius: 50%;
+  position: absolute;
+  left: 12.18em;
+  top: -1.87em;
+}
+.sun:before,
+.sun:after {
+  position: absolute;
+  content: "";
+  background-color: rgba(255, 197, 8, 0.3);
+  border-radius: 50%;
+}
+.sun:before {
+  height: 7.5em;
+  width: 7.5em;
+  right: -1.87em;
+  bottom: -1.87em;
+}
+.sun:after {
+  height: 12.5em;
+  width: 12.5em;
+  right: -4.37em;
+  bottom: -4.37em;
+}
+.ray1 {
+  height: 0;
+  width: 0.6em;
+  border-bottom: 10.6em solid rgba(255, 197, 8, 0.3);
+  border-left: 1.8em solid transparent;
+  border-right: 1.8em solid transparent;
+  position: absolute;
+  transform: rotate(130deg);
+  bottom: 0.6em;
+  right: 4em;
+}
+.ray2 {
+  position: absolute;
+  height: 0;
+  width: 0.9em;
+  border-bottom: 12.5em solid rgba(255, 197, 8, 0.3);
+  border-left: 2.1em solid transparent;
+  border-right: 2.1em solid transparent;
+  transform: rotate(230deg);
+  left: 3.75em;
+  bottom: -0.3em;
+}
+.ray3 {
+  position: absolute;
+  height: 0;
+  width: 0.3em;
+  border-bottom: 12.5em solid rgba(255, 197, 8, 0.3);
+  border-left: 0.9em solid transparent;
+  border-right: 0.9em solid transparent;
+  transform: rotate(80deg);
+  left: -5.3em;
+  bottom: -5.6em;
+}
+.ray4 {
+  position: absolute;
+  height: 0;
+  width: 0.1em;
+  border-bottom: 12.5em solid rgba(255, 197, 8, 0.3);
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  transform: rotate(280deg);
+  left: 7.5em;
+  bottom: -5.6em;
+}
+.moon {
+  height: 3.75em;
+  width: 3.75em;
+  box-shadow: 1.25em -1.25em 0 0 #80ccf8;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3.1em;
+  left: 10.93em;
+}
+.moon:before,
+.moon:after {
+  position: absolute;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+.moon:before {
+  height: 6.25em;
+  width: 6.25em;
+  right: -2.5em;
+  bottom: 0;
+}
+.moon:after {
+  height: 11.8em;
+  width: 11.8em;
+  left: -2.8em;
+  bottom: -2.8em;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="glow"></div>
+      <div class="stars"></div>
+      <div class="spinner">
+        <div class="sun">
+          <div class="ray1"></div>
+          <div class="ray2"></div>
+          <div class="ray3"></div>
+          <div class="ray4"></div>
+        </div>
+        <div class="moon"></div>
+      </div>
+    </div>
+</body>
+</html>
