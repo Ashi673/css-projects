@@ -1,0 +1,28 @@
+body
+	{
+		background: url(sky.jpg);
+		background-size: cover;
+		overflow: hidden;
+	}
+#bird
+	{
+		position:relative;
+		top: 100px;
+		background: url(bird3.png); 
+		width :150px;
+		height: 200px;		
+		animation: walking_animation 1s steps(2) infinite,move_backward 8s linear infinite;	
+	}
+
+@keyframes walking_animation
+	{
+		0%{background-position: 0px;}
+		100%{background-position: 2000px;}
+	}
+
+@keyframes move_backward
+	{
+		0%{transform:translateX(100px);}
+		100%{transform:translateX(1336px);}
+	}
+
