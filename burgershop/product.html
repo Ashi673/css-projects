@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrin-to-fit=no">
+    <title>Burger Land</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    #pmain-product{
+        width: 100%;
+        height: 1700px;
+        position: relative;
+}
+#pmain-product h1{
+    color: var(--color5);
+    text-align: center;
+    font-size: 3rem;
+}
+</style>
+</head>
+<body>
+<!--social bar start-->
+    <div id="socialBar">
+        <div class="social">
+            <a href="#" class="span1"><i class="fa-solid fa-envelope"></i>&nbsp;ashimughal@gmail.com</a>
+            <a href="#"><i class="fa-solid fa-phone-volume"></i> &nbsp;+92 03000112344</a>
+        </div>
+        <div class="social1">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+        </div>
+    </div>
+<!--social bar end-->
+<!--Menu bar start-->
+<div id="navbar">
+    <div class="logo">
+        <img src="images/burger.png" alt="Logo">
+        <h1 class="cheeji">Burger<span>Land</span></h1>
+    </div>
+    <div id="navbar-item">
+        <input type="checkbox" id="check"> 
+        <label for="check" class="togglebar"><i class="fa-solid fa-bars"></i></label>
+        <ul>
+            <li class="menu"><a href="index.html">Home</a></li>
+            <li class="menu">
+                <a href="product.html">Burgers <i class="fa-solid fa-angle-down"></i></a>
+                <ul>
+                    <li class="menu"><a href="product.html">Chicken Burger</a></li>
+                    <li class="menu"><a href="product.html">Beaf Burger</a></li>
+                    <li class="menu"><a href="product.html">Simple Egg Burger</a></li>
+                    <li class="menu"><a href="product.html">Cheese Burger <i class="fa-solid fa-angle-down"></i></a>
+                        <ul>
+                            <li class="menu"><a href="product.html">Chicken cheese Burger</a></li>
+                            <li class="menu"><a href="product.html">Double cheese Burger</a></li>
+                            <li class="menu"><a href="product.html">Cheese fried Burger</a></li>
+                        </ul></li>
+                    <li class="menu"><a href="product.html">Grill Burger <i class="fa-solid fa-angle-down"></i></a>
+                        <ul>
+                            <li class="menu"><a href="product.html">Chicken Grill Burger</a></li>
+                            <li class="menu"><a href="product.html">Beaf Grill Burger</a></li>
+                            <li class="menu"><a href="product.html">fried Burger</a></li>
+                            <li class="menu"><a href="product.html">Double Patty Burger</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu"><a href="product.html">Burger Deal</a></li>
+            <li class="menu"><a href="#">About Us</a></li>
+            <li class="menu"><a href="#">Contact Us</a></li>
+            <li>
+            <div class="login">
+                <a href="#searchModal"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-counter" class="cart-counter">0</span></a>
+                <li><a href=""><i class="fa-solid fa-user"></i></a>
+                    <ul>
+                        <li class="menu"><a href="#loginModal">Login</a></li>
+                        <li class="menu"><a href="#signupModal">Sign Up</a></li>
+                    </ul> 
+                </li>       
+           </div>
+        </li>
+        </ul>
+    </div>
+</div>
+
+<!--Search Modal-->
+<div id="searchModal" class="modal">
+    <div class="modal-search">
+        <a href="#" class="Sclose">&times;</a>
+        <form class="search-form">
+            <div class="search-wrapper">
+                <input type="search" placeholder="Search here..." class="search-input">
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--Login-->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <div class="login-img">
+            <img src="images/login.png" alt="">
+        </div>
+        <div class="modal-con">
+        <h2>Login</h2>
+        <form>
+            <input type="email" id="signup-email" name="email" required placeholder="Username">
+            <input type="password" id="login-password" name="password" required placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+        <div class="account">
+            <span>Didn't have account?</span><a href="#signupModal">Sign Up</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal">
+    <div class="Smodal-content">
+        <a href="#" class="close">&times;</a>
+        <div class="Slogin-img">
+            <img src="images/login.png" alt="">
+        </div>
+        <div class="Smodal-con">
+        <h2>Sign Up</h2>
+        <form>
+            <div style="display: flex; gap:78px;">
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+            </div>            
+            <input type="email" id="email" name="email" required placeholder="Email">
+            <div style="display: flex; gap:8px;">
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+            </div>
+            <input type="password" id="login-password" name="password" required placeholder="Password">
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="account">
+            <span>Already have an account?</span><a href="#signupModal">Sign In</a>
+        </div>
+    </div>
+</div>
+</div>
+<!--menu bar End-->
+
+<!--banner start-->
+<div id="banner">
+    <div class="text">
+        <h1>Tasty & Juicy Burgers Availabe</h1>
+        <p>Any type of burger with a variety of flavors and toppings.<br> Juicy patties, fresh veggies, and endless combinations. <br>You can order anytime, anywhere </p>
+    <button class="btn1"><a href="">Buy Now</a></button>
+    <button class="btn2"><a href="">Explore</a></button>
+    </div>
+    <div class="imagesB">
+        <img src="images/egg.png" alt="" class="img1">
+        <img src="images/chicken.png" alt="" class="img2">
+        <img src="images/beaf.png" alt="" class="img3">
+    </div>
+</div>
+<!--banner ends-->
+<!--Facilities offer start-->
+ <div id="facility">
+    <div class="facility-item">
+        <div class="pic">
+        <img src="images/shipped.png" alt="shipping" width="150" height="150">
+        </div>
+        <div class="content">
+            <h3>Fast Shipping</h3>
+            <p>Get your order delivered quickly with our fast shipping service!</p>
+        </div>
+    </div>
+    <div class="facility-item">
+        <div class="pic">
+        <img src="images/payment-method.png" alt="payment" width="130" height="130">
+    </div>
+    <div class="content">
+        <h3>Easy Payment</h3>
+        <p>Enjoy hassle-free shopping with our easy and secure payment options!</p>
+    </div>
+    </div>
+    <div class="facility-item">
+        <div class="pic">
+        <img src="images/exchange.png" alt="return" width="140" height="140">
+        </div>
+        <div class="content">
+            <h3>Quick Return</h3>
+            <p>Shop with confidence—30-day easy returns guaranteed!</p>
+        </div>
+    </div>
+ </div>
+<!--Facilities offer end-->
+<div id="pmain-product">
+    <h1>Our Tasty Bites</h1>
+        <div class="product">
+            <div class="product-items">
+                <img src="images/chicken.png" alt="">
+                <div class="content">
+                    <h2>Chicken Crust</h2>
+                    <p>The perfect crunch with our juicy chicken crust burger – crispy, flavorful, and irresistibly delicious!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>340PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Chicken Crust',340)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/beaf.png" alt="">
+                <div class="content">
+                    <h2>Bear Cruspy</h2>
+                    <p>Savor the rich, juicy flavor of our beef burger, grilled to perfection and packed with mouthwatering goodness</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>500PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Bear Cruspy',500)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items item2">
+                <img src="images/beaf-patty-burger.jpg" alt="">
+                <div class="content">
+                    <h2>Loaded Patties</h2>
+                    <p>Indulge in the classic taste of our patty burger – simple, juicy, and bursting with flavor in every bite!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>550PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Loaded Patties',550)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items item2">
+                <img src="images/cheese-burger.jpg" alt="">
+                <div class="content">
+                    <h2>Cheesy Bite</h2>
+                    <p>Get ready to melt with our cheesy, mouthwatering burger – loaded with rich, creamy cheese and juicy perfection!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>750PK</h3>
+                    <button class="btn-cart" onclick="addToCart('Cheesy Bite',750)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items item2">
+                <img src="images/humburger.jpg" alt="">
+                <div class="content">
+                    <h2>humburger</h2>
+                    <p>Satisfy your cravings with our classic hamburger flavorful, and cooked to perfection, just the way you like it!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>1220PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('humburger',1200)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/Fried-chicken.jpg" alt="">
+                <div class="content">
+                    <h2>Crispy fried</h2>
+                    <p>Enjoy the crispy perfection of our fried chicken – golden, crunchy on the outside and tender, juicy on the inside</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>500PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Crispy fried',500)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items item2">
+                <img src="images/deal1.jpg" alt="">
+                <div class="content">
+                    <h2>Double Deal</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>1000PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Double deal',1000)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/burger 2.jpeg" alt="">
+                <div class="content">
+                    <h2>Burger 2</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>650PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Burger 2',650)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/deal2.jpg" alt="">
+                <div class="content">
+                    <h2>One Person Deal</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>600PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('One Person deal',600)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/burger 5.jpeg" alt="">
+                <div class="content">
+                    <h2>Burger 5</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>450PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Burger 5',450)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/deal4.jpg" alt="">
+                <div class="content">
+                    <h2>Deal 4</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>2000PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Deal 4',2000)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/burger 3.jpg" alt="">
+                <div class="content">
+                    <h2>Burger 3</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>600PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Burger 3',600)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/wings1.jpeg" alt="">
+                <div class="content">
+                    <h2>Wings</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                         <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>1000PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Wings',1000)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/burger 4.jpeg" alt="">
+                <div class="content">
+                    <h2>Burger 4</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>400PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Burger 4',400)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/burger 1.jpeg" alt="">
+                <div class="content">
+                    <h2>Burger 1</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>300PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Burger 1',300)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+            <div class="product-items">
+                <img src="images/deal3.jpeg" alt="">
+                <div class="content">
+                    <h2>Two Person Deal</h2>
+                    <p>Enjoy our ultimate combo: a delicious burger, crispy fries, and golden fried chicken all in one unbeatable deal!</p>
+                    <div class="stars">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                    </div>
+                    <h3>800PKR</h3>
+                    <button class="btn-cart" onclick="addToCart('Two Person Deal',800)"><a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp;Add to Cart</a></button>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+<!--footer start-->
+<ddiv id="footer">
+    <div class="wave">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave"id="wave3"></div>
+    </div>
+<div class="section">
+    <div class="caption">
+    <h1>Burger<span>Land</span></h1>
+    <p>Discover a world of mouthwatering burgers on our website where every bite is crafted to satisfy your cravings.From classic flavors to gourmet creations .We offer a variety of options to make burger time your favorite time of the day.</p>
+    </div>
+    <div class="links">
+        <h1 class="linkH1">Contact Us:</h1>
+        <ul class="Contact">
+            <li><i class="fa-solid fa-envelope"></i>&nbsp;ashimughal@gmail.com</li>
+            <li><i class="fa-solid fa-phone-volume"></i>&nbsp;+92 03000112344</li>
+            <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27018.873264890157!2d74.15416548902512!3d32.1675883592343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39200943fa8b9d09%3A0xf5bca44cdce165b1!2sDigiLiftup!5e0!3m2!1sen!2s!4v1725479617720!5m2!1sen!2s" width="200" height="80" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+        </ul>
+        <h1  class="linkH2">Follow Us On:</h1>
+        <ul class="Contact1">
+            <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div class="mainlinks">
+        <h2>Site Main Pages</h2>
+        <ul>
+            <li class="menu"><a href="home.html"><i class="fa-solid fa-house"></i> &nbsp;Home</a></li>
+            <li class="menu"><a href="#"><i class="fa-solid fa-burger"></i>&nbsp;Burgers</a></li>
+            <li class="menu"><a href="#"><i class="fa-solid fa-file-zipper"></i>&nbsp;Deals</a></li>
+            <li class="menu"><a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;About Us</a></li>
+            <li class="menu"><a href="#"><i class="fa-solid fa-address-book"></i>&nbsp;Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+<div class="license">
+    <div class="license1">
+        <p>© 2024 CheejiLand. All rights reserved.</p>
+    </div>
+    <div class="license2">
+        <a href="">Terms & conditions</a>
+        <a href="">Privacy & Policy</a>
+    </div>
+    </div>
+</div>
+<!--footer End-->
+<script>
+// Add to cart
+function loadCart() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartCounterElement = document.getElementById('cart-counter');
+
+            // Update the cart counter
+            cartCounterElement.innerText = cartItems.length;
+        }
+
+        // Function to add an item to the cart
+        function addToCart(name, price) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            
+            // Add new item to cart
+            cartItems.push({ name, price });
+            
+            // Save updated cart to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            
+            // Alert user
+            alert(`${name} has been added to your cart!`);
+            
+            // Update the cart counter
+            loadCart();
+        }
+
+        // Call loadCart on page load to ensure the cart counter is accurate
+        window.onload = loadCart;
+
+</script>
+</body>
+</html>
