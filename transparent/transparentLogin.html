@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #2d3436;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 0;
+        margin:0;
+        background-image: url('garden.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    h1{
+        text-align: center;
+        margin-top: 0;
+        color: white;
+        font-size:40px;
+    }
+    #box{
+        width:300px;
+        height: 400px;
+        margin:50px auto;
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px solid white;
+        background:transparent;
+        box-shadow: 0 0 20px #27ae60;
+        position: relative;
+    }
+    .input-box input{
+    width: 250px;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 1px solid white;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-box input:focus {
+    border-bottom: 2px solid white;
+    background-color:none;
+}
+    #login{
+        padding: 5px 10px;
+    }
+    .btn{
+        width: 250px;
+        height: 40px;
+        margin-top: 60px;
+        color: #27ae60;
+        font-size: 22px;
+        line-height: 22px;
+        box-shadow: 0 0 20px #27ae60;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        background: white;
+        transition: all 0.5s ease-in-out 0s;
+    }
+    #box .btn:hover{
+        background:#27ae60 ;
+        color: white;
+        box-shadow: 0 0 20px #27ae60;
+    }
+    input::placeholder{
+        color:white;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 16px;
+    }
+    p{
+        color:white;
+        text-align: center;
+    }
+    p > span{
+        color:#27ae60;
+        text-align: center;
+    }
+    .input-box i{
+        position: absolute;
+        right: 40px;
+        margin-top: -25px;
+        color: white;
+        font-size: 14px;
+    }
+    input:focus + i{
+        display: none;
+    }
+</style>
+</head>
+<body>
+    
+</body>
+<div id="box">
+    <h1>Login</h1>
+    <form action="" id="login">
+        <div class="input-box">
+        <input type="email" id="email" name="email" placeholder="Username">
+        <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="input-box">
+        <input type="password" id="password" name="password" placeholder="Password"><i class="fa-solid fa-lock"></i>
+        <br>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p>Don't have an account?<span>Sign Up</span></p>
+    </form>
+</div>
+</html>
