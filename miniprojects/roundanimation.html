@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+<style>
+*{
+box-sizing: border-box;
+}
+body{
+font-family:Georgia, 'Times New Roman', Times, serif;
+min-height: 100vh;
+background-color:black;
+}
+h1{
+    text-align: center;
+    color:#3742fa;
+    padding: 10px;
+}
+#container{
+    position: relative;
+    width: 350px;
+    height:350px;
+    margin: 10% auto;
+}
+#container span {
+    position: absolute;
+    left: 20px;
+    top:60%;
+    width:25px;
+    height:7px;
+    background: #FEA47F;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(1.75) rotate(calc(var(--i) * (360deg / 52)));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 52));
+}
+@keyframes animateBlink {
+    0% {
+        background: #6D214F;
+    }
+    25% {
+        background: #FEA47F;
+    }
+}
+.box{
+    width: 300px;
+    position: absolute;
+    left: 30px;
+}
+.input-box{
+    position: relative;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-box input{
+    width: 250px;
+    height: 35px;
+    right: 10px;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin-top:10px;
+    background: transparent;
+    border: 1px solid #3742fa;
+    border-radius: 40px;
+}
+.input-box input:focus{
+    border-color: transparent;
+}
+.input-box label{
+    color: white;
+    left: 40px;
+    transform: translateY(-50%);
+    position: absolute;
+    color: white;
+    top:25px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+.input-box input:focus~label {
+    top: 10px;
+    font-size: 12px;
+    background-color: black;
+}
+.btn{
+    color:white;
+    background:linear-gradient(70deg,#c90313,#3742fa,rgb(94, 255, 0));
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    left:25px;
+    border-radius: 40px;
+    border: 1px solid transparent;
+    transition: all 0.5s ease-in-out;
+    animation: btn-animate 3s linear infinite alternate;
+    background-size: 200% 200%; /* Adjust this value to ensure smooth animation */
+}
+
+@keyframes btn-animate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.box p{
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+.signup-link a{
+    color: #3742fa;
+    text-decoration: none;
+    margin-top: 50px;
+    position: absolute;
+    align-items: center;
+    left:40%;
+}
+#container i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--clr);
+  transition: 0.5s;
+}
+#container i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+#container i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+#container i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+#container:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+</style>
+</head>
+<body>
+<div id="container">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#ff0057;"></i>
+        <i style="--clr:#4a0cf5;"></i>
+        <div class="box">
+            <h1>Login</h1>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text">
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="password">
+                    <label>Password</label>
+                </div>
+                <p>Forgot Password?</p>
+                <button type="submit" class="btn">Login</button>
+                <div class="signup-link"><a href="#">Signup?</a></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
