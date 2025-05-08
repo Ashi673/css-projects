@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom In Out</title>
+<style>
+#box{
+width:390px;
+position: relative;
+margin:0 auto;
+}
+#box .pic{
+   position:relative;
+   transition:all 0.5s;
+   transform-origin: 95% 50% 0;
+   z-index: 1;
+}
+#box img{
+   border-radius: 50%;
+}
+#box:hover .pic{
+    transform:rotate(-140deg);
+}
+#box .pic:after{
+    content: "";
+    position: absolute;
+    top:50%;
+    left:95%;
+    height:8px;
+    width:8px;
+    border-radius: 50%;
+    background: black;
+}
+#box #content{
+height:100%;
+width: 100%;
+color:white;
+left:0;
+top:0;
+padding:70px 20px;
+box-sizing: border-box;
+position: absolute;
+background:#b71540;
+border-radius: 50%;
+}
+
+#content p{
+font-size:16px;
+text-align: center;
+padding:10px;
+}
+#content h1{
+text-align: center;
+}
+</style>
+</head>
+<body>
+    <div id="box">
+       <div class="pic">
+        <img src="laptop.jpg" alt="Jasmin">
+        </div> 
+        <div id="content">
+            <h1>Laptop Era</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas beatae praesentium excepturi? Voluptatibus error corrupti rerum hic laborum numquam impedit iusto dolores, doloremque eius, maiores, ullam omnis architecto minus! Provident!</p>       
+</div>
+</div>
+</body>
+</html>

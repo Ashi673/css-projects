@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding caption</title>
+<style>
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #222;
+}
+#box{
+    background: #262626;
+    width:400px;
+    height: 250px;
+    margin:50px;
+    color: white;
+    padding: 30px;
+    position: relative;
+}
+#box::after,
+#box::before{
+    content:"";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg, #fb0094 , #0000ff ,#00ff00,#ffff00,#ff0000, #fb0094 , #0000ff ,#00ff00,#ffff00,#ff0000);
+    position: absolute;
+    background-size: 400%;
+    top:-2px;
+    z-index: -1;
+    left: -2px;
+    animation:animated-shadow 10s linear infinite alternate;
+}
+#box::after{
+    filter:blur(30px);
+}
+@keyframes animated-shadow {
+    0%{
+        background-position:0 0;
+    }
+    
+    50%{
+        background-position:100% 0;
+    }
+    
+    100%{
+        background-position:0 0;
+    }
+    
+}
+</style>
+</head>
+<body>
+    <div id="box"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fugiat perferendis exercitationem sint placeat ipsa quo aliquid, possimus veritatis ullam voluptates dolor magnam quod ratione? Voluptatum laudantium error consequatur eos.</p></div>
+</body>
+</html>

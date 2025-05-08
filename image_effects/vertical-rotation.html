@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding caption</title>
+<style>
+#box{
+overflow: hidden;
+width:300px;
+position: relative;
+margin:0 auto;
+perspective: 1000px;
+}
+#box .box-img img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+}
+#box .box-img{
+  transform: rotateY(0);
+  transition:all 0.5s ease-in-out 0s;
+}
+#box:hover .box-img{
+  transform: rotateY(-90deg);
+}
+#content{
+height: 100%;
+width: 100%;
+color:white;
+left:0;
+top:0;
+position: absolute;
+background:rgba(2, 168, 52, 0.5);
+padding: 60px 20px;
+transform: rotatey(90deg);
+box-sizing: border-box;
+transition:all 0.5s;
+}
+#box:hover #content{
+    transform: rotate(0);
+}
+#content p{
+border-block:1px solid white;
+font-size:12px;
+padding:10px 10px;
+}
+</style>
+</head>
+<body>
+    <div id="box">
+    <div class="box-img">
+        <img src="web.jpeg" alt="web">
+    </div>
+        <div id="content">
+            <h1>Ashi Mughal</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum neque quo architecto doloribus cupiditate quasi. Cum vel facilis sequi!.</p>
+       </div>
+</div>
+</body>
+</html>

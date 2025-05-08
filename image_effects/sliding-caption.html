@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding caption</title>
+<style>
+#box{
+border:1px solid black;
+overflow: hidden;
+width:300px;
+position: relative;
+margin:0 auto;
+}
+#box img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+}
+#content{
+height: 100%;
+width: 100%;
+color:white;
+left:0;
+bottom:-100%;
+position: absolute;
+background:rgba(2, 168, 52, 0.5);
+padding: 20px;
+box-sizing: border-box;
+transition:all 0.5s;
+}
+#box:hover #content{
+left:0;
+bottom:0;
+bottom:0;
+}
+#content p{
+border-block:1px solid white;
+font-size:12px;
+padding:10px 10px;
+}
+</style>
+</head>
+<body>
+    <div id="box">
+        <img src="jasmin.jpg" alt="Jasmin">
+        <div id="content">
+            <h1>Ashi Mughal</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum neque quo architecto doloribus cupiditate quasi. Cum vel facilis sequi!.</p>
+       </div>
+</div>
+</body>
+</html>
